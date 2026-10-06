@@ -1,0 +1,112 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+}
+
+/* ================= NAVBAR ================= */
+#navbar{
+  position:sticky;
+  top:0;
+  left:0;
+  z-index:100;
+  padding:.5rem 5rem;
+  box-shadow:5px 5px 20px rgba(0,0,0,.5);
+  background:black;
+}
+
+.navbar .navbar-brand{
+  font-size:25px;
+  font-weight:800;
+  color:darkgray;
+}
+
+#menu{
+  color:blanchedalmond;
+  font-weight:700;
+}
+
+#menu a:hover{
+  border-bottom:2px solid royalblue;
+}
+
+#menu button{
+  background:wheat;
+  width:5rem;
+  border-radius:15px;
+}
+
+/* ================= SECTIONS ================= */
+section{
+  width:100%;
+}
+
+/* ================= HOME ================= */
+#Home{
+  min-height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background:linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),
+             url("image/banner1.jpg");
+  background-size:cover;
+  background-position:center;
+  color:white;
+}
+
+#Home h1{
+  font-size:3rem;
+  font-weight:700;
+}
+
+/* ================= PRODUCTS ================= */
+.products{
+  display: grid;
+  grid-template-columns: repeat(3, 260px); 
+  grid-auto-rows: auto;                    
+  gap: 30px;
+  padding: 40px;
+  justify-content: center;                
+}
+
+.product-card{
+  width: 260px;
+  height: 360px;        
+  background: #eee;
+  border-radius: 18px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.product-card img{
+  width: 150px;     
+  height: 100px;
+  object-fit: contain;
+  margin-bottom: 15px;
+}
+.product-card button{
+  margin-top: auto;
+  background: #0d6efd;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+#topBtn{
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: #0d6efd;
+  color: white;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: none;
+}

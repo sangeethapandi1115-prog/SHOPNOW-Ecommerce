@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>E-Commerce</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="inter.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark" id="navbar">
+  <div class="container">
+
+    <a class="navbar-brand" href="#">SHOPNOW</a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="menu">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="#Home">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#products">Products</a></li>
+        <li class="nav-item"><a class="nav-link" href="#cart">Cart</a></li>
+        <li class="nav-item"><a class="nav-link" href="#checkout">Checkout</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+      </ul>
+<span id="user-name" class="text-warning fw-bold ms-3"></span>
+
+<button class="btn btn-danger btn-sm ms-2"
+        id="logoutBtn"
+        onclick="logoutUser()"
+        style="display:none;">
+  Logout
+</button>
+
+<button class="btn btn-warning ms-lg-3"
+        data-bs-toggle="modal"
+        data-bs-target="#loginModal"
+        id="loginBtn">
+  Sign In
+</button>
+    </div>
+  </div>
+</nav>
+<!--HOME-->
+    <section id="Home">
+  <div class="container text-center text-white">
+    <h1>Best Online Shopping Experience</h1>
+    <p>Buy quality products at affordable prices</p>
+    <button class="btn btn-primary mt-3"
+        onclick="location.href='#products'">
+  Shop Now
+</button>
+
+  </div>
+</section>
+<!--product-->
+<section id="products" class="py-5 bg-light">
+  <div class="container">
+    <h2 class="text-center mb-5">Our Products</h2>
+
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="card product-card">
+          <img src="image/Airdopes.webp" class="card-img-top" alt="Airdopes">
+          <div class="card-body text-center">
+            <h5>Airdopes</h5>
+            <p class="text-muted">Noise Cancelling</p>
+            <p><del>₹4,999</del> <span class="text-success fw-bold">₹2,999</span></p>
+            <button class="btn btn-primary w-100 add-to-cart"
+        data-name="Airdopes"
+        data-price="2999"
+        data-img="image/Airdopes.webp">
+  Add to Cart
+</button>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card product-card">
+          <img src="image/neckband.webp" class="card-img-top" alt="Neckband">
+          <div class="card-body text-center">
+            <h5>Neckband</h5>
+            <p class="text-muted">Deep Bass</p>
+            <p><del>₹2,499</del> <span class="text-success fw-bold">₹1,499</span></p>
+            <button class="btn btn-primary w-100 add-to-cart"
+        data-name="Neckband"
+        data-price="1499"
+        data-img="image/neckband.webp">
+  Add to Cart
+</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card product-card">
+          <img src="image/smartwatch.jpg" class="card-img-top" alt="Watch">
+          <div class="card-body text-center">
+            <h5>Smart Watch</h5>
+            <p class="text-muted">Fitness Tracker</p>
+            <p><del>₹3,999</del> <span class="text-success fw-bold">₹1,999</span></p>
+            <button class="btn btn-primary w-100 add-to-cart"
+        data-name="SmartWatch"
+        data-price="1999"
+        data-img="image/smartwatch.jpg">
+  Add to Cart
+</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card product-card">
+          <img src="image/shoes.webp" class="card-img-top" alt="Shoes">
+          <div class="card-body text-center">
+            <h5>Shoes</h5>
+            <p class="text-muted">Running Shoes</p>
+            <p><del>₹2,999</del> <span class="text-success fw-bold">₹1,499</span></p>
+            <button class="btn btn-primary w-100 add-to-cart"
+        data-name="Shoes"
+        data-price="1499"
+        data-img="image/shoes.webp">
+  Add to Cart
+</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card product-card">
+          <img src="image/wallet.webp" class="card-img-top" alt="Wallet">
+          <div class="card-body text-center">
+            <h5>Wallet</h5>
+            <p class="text-muted">Leather Wallet</p>
+            <p><del>₹1,499</del> <span class="text-success fw-bold">₹799</span></p>
+            <button class="btn btn-primary w-100 add-to-cart"
+        data-name="Wallet"
+        data-price="799"
+        data-img="image/wallet.webp">
+  Add to Cart
+</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card product-card">
+          <img src="image/mobilePouch.webp" class="card-img-top" alt="Mobile Pouch">
+          <div class="card-body text-center">
+            <h5>Mobile Pouch</h5>
+            <p class="text-muted">Travel Friendly</p>
+            <p><del>₹999</del> <span class="text-success fw-bold">₹499</span></p>
+            <button class="btn btn-primary w-100 add-to-cart"
+        data-name="mobile Pouch"
+        data-price="499"
+        data-img="image/mobilePouch.webp">
+  Add to Cart
+</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card product-card">
+          <img src="image/shopping.webp" class="card-img-top" alt="Product">
+          <div class="card-body text-center">
+            <h5>Specs</h5>
+            <p class="text-muted">Trending</p>
+            <p><del>₹2,499</del> <span class="text-success fw-bold">₹1,299</span></p>
+            <button class="btn btn-primary w-100 add-to-cart"
+        data-name="Specs"
+        data-price="1299"
+        data-img="image/shopping.webp">
+  Add to Cart
+</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card product-card">
+          <img src="image/shopping (1).webp" class="card-img-top" alt="Product">
+          <div class="card-body text-center">
+            <h5>Watch</h5>
+            <p class="text-muted">New Arrival</p>
+            <p><del>₹2,999</del> <span class="text-success fw-bold">₹1,799</span></p>
+            <button class="btn btn-primary w-100 add-to-cart"
+        data-name="Watch"
+        data-price="1799"
+        data-img="image/shopping (1).webp">
+  Add to Cart
+</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card product-card">
+          <img src="image/shopping (2).webp" class="card-img-top" alt="Product">
+          <div class="card-body text-center">
+            <h5>Women Shoes</h5>
+            <p class="text-muted">Best Seller</p>
+            <p><del>₹3,499</del> <span class="text-success fw-bold">₹2,199</span></p>
+            <button class="btn btn-primary w-100 add-to-cart"
+        data-name="Women Shoes"
+        data-price="2199"
+        data-img="image/shopping (2).webp">
+  Add to Cart
+</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CART SECTION -->
+<section id="cart" class="py-5">
+  <div class="container">
+    <h2 class="text-center mb-4">Your Cart</h2>
+
+    <div class="table-responsive">
+      <table class="table align-middle text-center">
+        <thead class="table-dark">
+          <tr>
+            <th>Image</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Qty</th>
+            <th>Total</th>
+            <th>Remove</th>
+          </tr>
+        </thead>
+        <tbody id="cart-items">
+        </tbody>
+      </table>
+    </div>
+
+    <div class="text-end">
+      <h4>Total Amount : ₹ <span id="grand-total">0</span></h4>
+    </div>
+  </div>
+</section>
+<!-- CHECKOUT SECTION -->
+<section id="checkout" class="py-5 bg-light">
+  <div class="container">
+    <h2 class="text-center mb-4">Checkout</h2>
+
+    <div class="row g-4">
+      <!-- SHIPPING DETAILS -->
+      <div class="col-md-6">
+        <div class="p-4 bg-white shadow rounded">
+          <h4 class="mb-3">Shipping Details</h4>
+
+          <input type="text" id="name" class="form-control mb-3" placeholder="Full Name">
+          <input type="email" id="email" class="form-control mb-3" placeholder="Email">
+          <input type="text" id="address" class="form-control mb-3" placeholder="Address">
+          <input type="text" id="city" class="form-control mb-3" placeholder="City">
+          <input type="text" id="pincode" class="form-control mb-3" placeholder="Pincode">
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="p-4 bg-white shadow rounded">
+          <h4 class="mb-3">Order Summary</h4>
+
+          <ul class="list-group mb-3" id="order-summary">
+          </ul>
+
+          <h5 class="text-end">
+            Total : ₹ <span id="checkout-total">0</span>
+          </h5>
+
+          <button class="btn btn-success w-100 mt-3" onclick="placeOrder()">
+            Place Order
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT SECTION -->
+<section id="contact" class="py-5 bg-dark text-white">
+  <div class="container">
+    <h2 class="text-center mb-4">Contact Us</h2>
+
+    <div class="row g-4">
+      <!-- CONTACT INFO -->
+      <div class="col-md-4">
+        <h5>📍 Address</h5>
+        <p>21, Anna Nagar,<br>Kovilpatti</p>
+
+        <h5>📞 Phone</h5>
+        <p>+91 98765 43210</p>
+
+        <h5>📧 Email</h5>
+        <p>support@shopnow.com</p>
+      </div>
+
+      <!-- CONTACT FORM -->
+      <div class="col-md-8">
+        <form onsubmit="return submitContact()">
+          <input type="text" id="cname" class="form-control mb-3" placeholder="Your Name">
+          <input type="email" id="cemail" class="form-control mb-3" placeholder="Your Email">
+          <input type="text" id="csubject" class="form-control mb-3" placeholder="Subject">
+          <textarea id="cmessage" class="form-control mb-3" rows="4" placeholder="Your Message"></textarea>
+
+          <button class="btn btn-warning">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- SIGN IN -->
+<div class="modal fade" id="loginModal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <h5 class="modal-title">Sign In</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <div class="modal-body">
+        <input type="email" id="loginEmail"
+               class="form-control mb-3"
+               placeholder="Email">
+
+        <input type="password" id="loginPassword"
+               class="form-control mb-3"
+               placeholder="Password">
+      </div>
+
+      <div class="modal-footer">
+        <button class="btn btn-secondary"
+                data-bs-dismiss="modal">Close</button>
+
+        <button class="btn btn-success"
+                onclick="loginUser()">Login</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="int.js"></script>
+<footer class="bg-black text-white text-center py-3">
+  <p>© 2026 SHOPNOW. All Rights Reserved.</p>
+</footer>
+<button id="topBtn" onclick="scrollToTop()">⬆</button>
+
+</body>
+</html>
